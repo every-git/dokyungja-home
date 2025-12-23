@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Layout } from '../components/layout/Layout';
 import { motion } from 'motion/react';
 import { Hero } from '../components/landing/Hero';
@@ -14,6 +16,21 @@ import { ClosingSection } from '../components/landing/ClosingSection';
 import asset11 from '../assets/images/dokyungja_11.png'; // Wait, asset11 is used in floating char. Keeping it.
 
 export default function Home() {
+    const location = useLocation();
+
+    // Handle hash scroll on navigation
+    useEffect(() => {
+        if (location.hash) {
+            // Small delay to ensure DOM is ready
+            setTimeout(() => {
+                const element = document.getElementById(location.hash.slice(1));
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 100);
+        }
+    }, [location.hash]);
+
     return (
         <Layout>
             <Hero />

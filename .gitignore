@@ -7,6 +7,10 @@ yarn-debug.log*
 # Agent files
 AGENTS.md
 **/AGENTS.md
+
+# Presentation files
+presentation.html
+presentation_script.md
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
