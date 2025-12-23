@@ -7,7 +7,7 @@ import JourneyDetail from './pages/JourneyDetail';
 
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/dokyungja-home">
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/journey/:id" element={<JourneyDetail />} />
