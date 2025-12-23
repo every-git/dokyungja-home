@@ -45,25 +45,12 @@
 
 ## 🛠️ 기술 스택
 
-```mermaid
-mindmap
-  root((Tech Stack))
-    Frontend
-      React 18
-      TypeScript
-      TailwindCSS
-    Animation
-      Framer Motion
-      CSS Transitions
-      Scroll Transforms
-    Build
-      Vite
-      PostCSS
-      ESBuild
-    Deploy
-      GitHub Actions
-      GitHub Pages
-```
+| 분류 | 기술 |
+|:----:|------|
+| **🎨 Frontend** | React 18 · TypeScript · TailwindCSS |
+| **✨ Animation** | Framer Motion · CSS Transitions · Scroll Transforms |
+| **⚙️ Build** | Vite · PostCSS · ESBuild |
+| **🚀 Deploy** | GitHub Actions · GitHub Pages |
 
 ---
 
