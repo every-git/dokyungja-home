@@ -116,6 +116,7 @@ function StoryItem({ story, index }: { story: typeof stories[0], index: number }
                 </p>
                 <Link
                     to={`/journey/${story.id}`}
+                    onClick={() => sessionStorage.setItem('journeyScrollY', window.scrollY.toString())}
                     className="inline-block mt-10 px-10 py-4 rounded-full border border-primary/20 bg-background/50 hover:bg-primary hover:text-primary-foreground backdrop-blur-sm transition-all text-xl font-bold shadow-lg"
                 >
                     More Detail →

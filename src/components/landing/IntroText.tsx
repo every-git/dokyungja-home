@@ -114,13 +114,13 @@ export function IntroText() {
                 <div className="space-y-6 md:space-y-8">
                     {/* Line 1 */}
                     <AnimatedWord delay={0}>
-                        기존 개발 프로세스에 AI를 접목하여
+                        도메인에 대한 깊은 이해와 AI의 결합으로
                     </AnimatedWord>
 
                     {/* Line 2 - Highlighted */}
                     <div className="pt-4">
                         <AnimatedWord delay={0.3} highlight>
-                            10배의 생산성을 만드는
+                            10배의 생산성을 만들어가는
                         </AnimatedWord>
                     </div>
 

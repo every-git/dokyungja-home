@@ -18,18 +18,23 @@ import asset11 from '../assets/images/dokyungja_11.png'; // Wait, asset11 is use
 export default function Home() {
     const location = useLocation();
 
-    // Handle hash scroll on navigation
+    // Restore scroll position instantly on navigation back
     useEffect(() => {
-        if (location.hash) {
-            // Small delay to ensure DOM is ready
+        const savedScrollY = sessionStorage.getItem('journeyScrollY');
+        if (savedScrollY) {
+            // Instant scroll (no animation)
+            window.scrollTo(0, parseInt(savedScrollY, 10));
+            sessionStorage.removeItem('journeyScrollY');
+        } else if (location.hash) {
+            // Fallback for hash navigation
             setTimeout(() => {
                 const element = document.getElementById(location.hash.slice(1));
                 if (element) {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    element.scrollIntoView({ behavior: 'auto', block: 'start' });
                 }
-            }, 100);
+            }, 50);
         }
-    }, [location.hash]);
+    }, [location]);
 
     return (
         <Layout>

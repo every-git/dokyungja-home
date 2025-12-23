@@ -183,7 +183,7 @@ export default function JourneyDetail() {
                         className="bg-card text-card-foreground p-8 md:p-12 rounded-3xl shadow-2xl border border-border"
                     >
                         <button
-                            onClick={() => navigate(`/#journey-${id}`)}
+                            onClick={() => navigate('/')}
                             className="inline-flex items-center text-sm text-muted-foreground hover:text-primary mb-8 transition-colors cursor-pointer"
                         >
                             <ArrowLeft size={16} className="mr-2" />
@@ -196,7 +196,7 @@ export default function JourneyDetail() {
 
                         <div className="mt-12 pt-12 border-t border-border flex justify-center">
                             <button
-                                onClick={() => navigate(`/#journey-${id}`)}
+                                onClick={() => navigate('/')}
                                 className="px-8 py-3 bg-primary text-primary-foreground rounded-full font-bold hover:opacity-90 transition-all cursor-pointer shadow-lg hover:translate-y-[-2px]"
                             >
                                 다음 여정 계속하기
