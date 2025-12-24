@@ -22,7 +22,7 @@ export function StickyStackingSection({
 }: StickyStackingSectionProps) {
     return (
         <motion.div
-            className={`sticky top-0 overflow-hidden ${className}`}
+            className={`sticky top-0 ${className}`}
             style={{ zIndex }}
             initial={{ y: 100, opacity: 0.8 }}
             whileInView={{ y: 0, opacity: 1 }}
