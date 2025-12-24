@@ -44,11 +44,15 @@ export function ClosingSection() {
                         </h2>
 
                         <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                            지금까지 도경자의 여정을 함께해주셔서 감사합니다.<br />
-                            우리는 계속해서 상식의 중력을 거스르고,<br />
-                            새로운 기술의 우주를 유영할 것입니다.<br />
+                            지금까지 도경자의 여정을<br />
+                            함께해주셔서 감사합니다.<br />
+                            우리는 계속해서<br />
+                            상식의 중력을 거스르고,<br />
+                            새로운 기술의 우주를<br />
+                            유영할 것입니다.<br />
                             <br />
-                            더 궁금한 이야기나 제안이 있으신가요?
+                            더 궁금한 이야기나<br />
+                            제안이 있으신가요?
                         </p>
 
                         <div className="flex justify-center md:justify-start pt-4">
