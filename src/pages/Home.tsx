@@ -51,7 +51,7 @@ export default function Home() {
 
             {/* Spacer with Keyboard for Typing Section */}
             <div className="relative h-40 md:h-64">
-                <FloatingDevice type="keyboard" position="right" offsetY={0} />
+                <FloatingDevice type="keyboard" position="right" offsetY={-50} />
             </div>
 
             {/* 2. Features Flow */}
