@@ -35,7 +35,7 @@ export function Header() {
                         <ThemeToggle />
                         <button
                             onClick={() => setIsCoffeeOpen(true)}
-                            className="hidden sm:block px-4 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-full hover:opacity-90 transition-opacity"
+                            className="px-4 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-full hover:opacity-90 transition-opacity"
                         >
                             커피 한잔
                         </button>
