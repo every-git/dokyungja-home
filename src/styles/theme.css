@@ -185,3 +185,44 @@
     line-height: 1.5;
   }
 }
+
+/* ================================
+   REDUCED MOTION & MOBILE OPTIMIZATIONS
+   ================================ */
+
+/* Respect user's motion preference (improves mobile performance) */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+
+  /* Reduce animation complexity on mobile */
+  .floating-device,
+  [data-floating] {
+    transition-duration: 0.1s !important;
+  }
+
+  /* Optimize image rendering on mobile */
+  img {
+    content-visibility: auto;
+  }
+
+  /* Reduce blur effects which are GPU-intensive */
+  .backdrop-blur-md {
+    backdrop-filter: blur(4px) !important;
+  }
+
+  .backdrop-blur-sm {
+    backdrop-filter: blur(2px) !important;
+  }
+}
