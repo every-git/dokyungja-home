@@ -3,7 +3,7 @@ import { motion, useInView } from 'motion/react';
 import { Link } from 'react-router-dom';
 
 import asset02 from '../../assets/images/dokyungja_02.webp';
-import asset03 from '../../assets/images/dokyungja_03.webp';
+import asset03 from '../../assets/images/dokyungja_03.mp4';
 import asset04 from '../../assets/images/dokyungja_04.mp4';
 import asset05 from '../../assets/images/dokyungja_05.webp';
 import asset09 from '../../assets/images/dokyungja_09.mp4';
@@ -49,6 +49,7 @@ const stories = [
         desc: '나의 취향 데이터와 트렌드 분석 AI가 만났습니다.\n수많은 제품 홍수 속에서\n정말 가치 있는 물건만을 큐레이션합니다.',
         device: 'iphone',
         char: asset03,
+        isVideo: true,
         content: <MockContent title="Smart Select Shop" color="bg-gradient-to-br from-purple-800 to-fuchsia-900" icon="🛍️" />
     },
     {
