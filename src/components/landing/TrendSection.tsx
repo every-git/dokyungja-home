@@ -19,7 +19,7 @@ export function TrendSection() {
     const yText = useTransform(scrollYProgress, [0, 1], [100, -100]);
 
     return (
-        <section ref={containerRef} className="relative py-32 bg-background overflow-hidden min-h-[150vh]">
+        <section ref={containerRef} className="relative py-32 overflow-hidden min-h-[150vh]">
             <div className="sticky top-0 h-screen flex flex-col items-center justify-center">
 
                 {/* Text Title - Fades out as image expands or just stays relative? 

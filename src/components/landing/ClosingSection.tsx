@@ -4,7 +4,7 @@ import asset12 from '../../assets/images/dokyungja.12.mp4';
 
 export function ClosingSection() {
     return (
-        <section className="relative py-32 bg-background overflow-hidden">
+        <section className="relative py-32 overflow-hidden">
             {/* Background Decor */}
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-primary/10 pointer-events-none" />
 

@@ -4,7 +4,7 @@ import economyImg from '../../assets/images/Economy.webp';
 
 export function NewsSection() {
     return (
-        <section className="relative py-32 bg-slate-50 dark:bg-slate-900/50 overflow-hidden">
+        <section className="relative py-32 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6">
 
                 <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">

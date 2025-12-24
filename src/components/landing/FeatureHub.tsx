@@ -55,7 +55,7 @@ const features = [
 
 export function FeatureHub() {
     return (
-        <section className="py-24 bg-background">
+        <section className="py-24">
             <div className="max-w-7xl mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

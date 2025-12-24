@@ -13,6 +13,7 @@ import { TrendSection } from '../components/landing/TrendSection';
 import { Community } from '../components/landing/Community';
 import { FloatingDevice } from '../components/common/FloatingDevice';
 import { ClosingSection } from '../components/landing/ClosingSection';
+import { StickyStackingSection } from '../components/common/StickyStackingSection';
 import asset11 from '../assets/images/dokyungja_11.webp'; // Wait, asset11 is used in floating char. Keeping it.
 
 export default function Home() {
@@ -39,68 +40,90 @@ export default function Home() {
     return (
         <Layout>
             <Hero />
-            <IntroText />
 
-            {/* Spacer with MacBook (Intro to Community) */}
-            <div className="relative h-40 md:h-64">
-                <FloatingDevice type="mac" position="left" offsetY={0} />
-            </div>
+            {/* All sections after Hero use sticky stacking with unified background */}
 
-            {/* 1. Community Intro */}
-            <Community />
+            {/* Section 0: IntroText */}
+            <StickyStackingSection zIndex={1} className="bg-[var(--sticky-section)]">
+                <IntroText />
+            </StickyStackingSection>
 
-            {/* Spacer with Keyboard for Typing Section */}
-            <div className="relative h-40 md:h-64">
-                <FloatingDevice type="keyboard" position="right" offsetY={-50} />
-            </div>
+            {/* Section 1: Community - keeps dark background (component has own bg-black) */}
+            <StickyStackingSection zIndex={2}>
+                <div className="relative h-40 md:h-64 bg-black">
+                    <FloatingDevice type="mac" position="left" offsetY={0} />
+                </div>
+                <Community />
+            </StickyStackingSection>
 
-            {/* 2. Features Flow */}
-            <TypingSection />
+            {/* Section 2: Typing with Keyboard spacer */}
+            <StickyStackingSection zIndex={3} className="bg-[var(--sticky-section)]">
+                <div className="relative h-40 md:h-64">
+                    <FloatingDevice type="keyboard" position="right" offsetY={-50} />
+                </div>
+                <TypingSection />
+            </StickyStackingSection>
 
-            {/* Spacer with News Bell for NewsSection */}
-            <div className="relative h-40 md:h-64">
-                <FloatingDevice type="newsbell" position="left" offsetY={0} />
-            </div>
+            {/* Section 3: News with Bell spacer */}
+            <StickyStackingSection zIndex={4} className="bg-[var(--sticky-section)]">
+                <div className="relative h-40 md:h-64">
+                    <FloatingDevice type="newsbell" position="left" offsetY={0} />
+                </div>
+                <NewsSection />
+            </StickyStackingSection>
 
-            <NewsSection />
+            {/* Section 4: Trend with Robot spacer */}
+            <StickyStackingSection zIndex={5} className="bg-[var(--sticky-section)]">
+                <div className="relative h-40 md:h-64">
+                    <FloatingDevice type="newsrobot" position="right" offsetY={0} />
+                </div>
+                <TrendSection />
+            </StickyStackingSection>
 
-            {/* Spacer with News Robot for TrendSection */}
-            <div className="relative h-40 md:h-64">
-                <FloatingDevice type="newsrobot" position="right" offsetY={0} />
-            </div>
+            {/* Section 5: Engineer Character */}
+            <StickyStackingSection zIndex={6} className="bg-[var(--sticky-section)]">
+                <div className="flex justify-center py-16 overflow-hidden">
+                    <motion.div
+                        initial={{ y: 200, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="relative"
+                    >
+                        <motion.img
+                            src={asset11}
+                            alt="Floating Character"
+                            className="w-[400px] md:w-[700px] object-contain drop-shadow-2xl"
+                            animate={{ y: [0, -20, 0] }}
+                            transition={{
+                                duration: 4,
+                                repeat: Infinity,
+                                ease: "easeInOut",
+                                delay: 0.8
+                            }}
+                        />
+                    </motion.div>
+                </div>
+            </StickyStackingSection>
 
-            <TrendSection />
+            {/* Section 6: Feature Hub */}
+            <StickyStackingSection zIndex={7} className="bg-[var(--sticky-section)]">
+                <FeatureHub />
+            </StickyStackingSection>
 
-            {/* Engineer Character (After Trend Collector) */}
-            {/* Animated Character (Floating from bottom) */}
-            <div className="flex justify-center py-16 bg-background overflow-hidden">
-                <motion.div
-                    initial={{ y: 200, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="relative"
-                >
-                    <motion.img
-                        src={asset11}
-                        alt="Floating Character"
-                        className="w-[400px] md:w-[700px] object-contain drop-shadow-2xl"
-                        animate={{ y: [0, -20, 0] }}
-                        transition={{
-                            duration: 4,
-                            repeat: Infinity,
-                            ease: "easeInOut",
-                            delay: 0.8 // Start floating after entrance
-                        }}
-                    />
-                </motion.div>
-            </div>
+            {/* Section 7: Skills Universe */}
+            <StickyStackingSection zIndex={8} className="bg-[var(--sticky-section)]">
+                <SkillsUniverse />
+            </StickyStackingSection>
 
-            <FeatureHub />
-            <SkillsUniverse />
-            <JourneyMap />
+            {/* Section 8: Journey Map */}
+            <StickyStackingSection zIndex={9} className="bg-[var(--sticky-section)]">
+                <JourneyMap />
+            </StickyStackingSection>
 
-            {/* Closing Section with Contact */}
-            <ClosingSection />
+            {/* Section 9: Closing */}
+            <StickyStackingSection zIndex={10} className="bg-[var(--sticky-section)]">
+                <ClosingSection />
+            </StickyStackingSection>
         </Layout>
     );
 }

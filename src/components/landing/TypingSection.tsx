@@ -6,7 +6,7 @@ const appleEase: [number, number, number, number] = [0.25, 0.1, 0.25, 1.0];
 
 export function TypingSection() {
     return (
-        <section className="relative py-32 bg-background overflow-hidden">
+        <section className="relative py-32 overflow-hidden">
             <div className="max-w-6xl mx-auto px-6 flex flex-col items-center">
 
                 <motion.div

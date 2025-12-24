@@ -98,7 +98,7 @@ const categoryLabels: Record<string, string> = {
 
 export function SkillsUniverse() {
     return (
-        <section className="py-32 bg-muted/20 overflow-hidden">
+        <section className="py-32 overflow-hidden">
             <div className="max-w-6xl mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -182,9 +182,9 @@ export function SkillsUniverse() {
                     {Object.entries(categoryLabels).map(([en, ko]) => (
                         <div key={en} className="flex items-center gap-2">
                             <div className={`w-3 h-3 rounded-full ${en === 'Development' ? 'bg-blue-500' :
-                                    en === 'Infrastructure' ? 'bg-purple-500' :
-                                        en === 'Creative' ? 'bg-pink-500' :
-                                            'bg-orange-500'
+                                en === 'Infrastructure' ? 'bg-purple-500' :
+                                    en === 'Creative' ? 'bg-pink-500' :
+                                        'bg-orange-500'
                                 }`} />
                             <span>{en} / {ko}</span>
                         </div>

@@ -145,7 +145,7 @@ function StoryItem({ story, index }: { story: typeof stories[0], index: number }
 
 export function JourneyMap() {
     return (
-        <section id="journey" className="relative bg-background overflow-hidden scroll-mt-16">
+        <section id="journey" className="relative overflow-hidden scroll-mt-16">
             <div className="max-w-7xl mx-auto pb-32">
                 <div className="py-24 text-center">
                     <motion.h2

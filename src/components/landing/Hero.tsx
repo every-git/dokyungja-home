@@ -41,7 +41,7 @@ export function Hero() {
     }, [mouseX, mouseY]);
 
     return (
-        <section ref={sectionRef} className="relative min-h-[150vh] flex flex-col items-center pt-24 overflow-x-hidden">
+        <section ref={sectionRef} className="relative min-h-[150vh] flex flex-col items-center pt-24 overflow-x-hidden bg-[var(--sticky-section)]">
 
             {/* Sticky Text Container - Fades out as we scroll */}
             <div className="fixed top-32 left-0 w-full z-10 pointer-events-none mix-blend-difference text-white">
