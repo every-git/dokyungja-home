@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Mail, ArrowRight } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import asset12 from '../../assets/images/dokyungja.12.mp4';
 
 export function ClosingSection() {
@@ -51,7 +51,7 @@ export function ClosingSection() {
                             더 궁금한 이야기나 제안이 있으신가요?
                         </p>
 
-                        <div className="flex flex-col md:flex-row items-center gap-4 pt-4">
+                        <div className="flex justify-center md:justify-start pt-4">
                             <a
                                 href="mailto:contact@dokyungja.us"
                                 className="group relative inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-full text-lg font-bold hover:bg-primary/90 transition-all hover:scale-105 shadow-xl hover:shadow-primary/25 overflow-hidden"
@@ -61,13 +61,6 @@ export function ClosingSection() {
                                     Contact Me
                                 </span>
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700 ease-in-out" />
-                            </a>
-
-                            <a
-                                href="mailto:contact@dokyungja.us"
-                                className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
-                            >
-                                contact@dokyungja.us <ArrowRight size={14} />
                             </a>
                         </div>
                     </motion.div>

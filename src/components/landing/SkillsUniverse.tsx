@@ -30,9 +30,18 @@ const skills = [
         id: 'java',
         title: 'Java',
         category: 'Development',
-        desc: 'Spring Boot · MySQL\nTomcat · Python',
+        desc: 'Spring Boot · MySQL\nTomcat · JPA',
         icon: Server,
         color: 'bg-rose-600',
+        size: 'col-span-1 row-span-2', // Tall
+    },
+    {
+        id: 'python',
+        title: 'Python',
+        category: 'Development',
+        desc: '데이터 분석 · 자동화\nPandas · Selenium · API',
+        icon: Terminal,
+        color: 'bg-yellow-600',
         size: 'col-span-1 row-span-2', // Tall
     },
 
@@ -114,7 +123,7 @@ export function SkillsUniverse() {
                 </motion.div>
 
                 {/* Lego-style Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[140px]">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-auto">
                     {skills.map((skill, i) => (
                         <motion.div
                             key={skill.id}
