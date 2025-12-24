@@ -52,6 +52,7 @@ export function TrendSection() {
                     <img
                         src={trendCollectorImg}
                         alt="Trend Collector"
+                        loading="lazy"
                         className="w-full h-full object-cover"
                     />
 

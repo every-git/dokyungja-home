@@ -39,6 +39,7 @@ export function TypingSection() {
                     <img
                         src={devtyperBg}
                         alt="DevTyper - 개발자 타자연습"
+                        loading="lazy"
                         className="w-full h-auto group-hover:brightness-110 transition-all duration-500"
                     />
 

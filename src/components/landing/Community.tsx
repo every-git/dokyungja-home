@@ -132,6 +132,7 @@ function Card({ img, label, delay = 0 }: { img: string, label: string, delay?: n
             <img
                 src={img}
                 alt={label}
+                loading="lazy"
                 className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out"
             />
             <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent">
