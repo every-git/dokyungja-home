@@ -44,7 +44,7 @@ export function Header() {
 
                 {/* Scroll Progress Bar */}
                 <motion.div
-                    className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 origin-left"
+                    className="absolute bottom-0 left-0 right-0 h-[3px] bg-gray-400 dark:bg-gray-600 origin-left"
                     style={{ scaleX }}
                 />
             </motion.header>
