@@ -9,7 +9,7 @@ export function ClosingSection() {
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-primary/10 pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-24">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-16 lg:gap-20">
 
                     {/* Visual Side */}
                     <motion.div
@@ -36,14 +36,14 @@ export function ClosingSection() {
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="w-full md:w-1/2 text-center md:text-left space-y-8"
+                        className="w-full md:w-1/2 max-w-2xl text-center md:text-left space-y-6 md:space-y-8 px-6 md:px-8"
                     >
-                        <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-tight">
-                            Gravity is just<br />
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-tight break-words">
+                            Gravity is just{' '}
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-amber-500">a suggestion.</span>
                         </h2>
 
-                        <p className="text-xl text-muted-foreground leading-relaxed">
+                        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                             지금까지 도경자의 여정을 함께해주셔서 감사합니다.<br />
                             우리는 계속해서 상식의 중력을 거스르고,<br />
                             새로운 기술의 우주를 유영할 것입니다.<br />
