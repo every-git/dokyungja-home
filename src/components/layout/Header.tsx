@@ -1,11 +1,19 @@
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../common/ThemeToggle';
-import { motion } from 'motion/react';
+import { motion, useScroll, useSpring } from 'motion/react';
 import { useState } from 'react';
 import { BuyCoffeeModal } from '../common/BuyCoffeeModal';
 
 export function Header() {
     const [isCoffeeOpen, setIsCoffeeOpen] = useState(false);
+
+    // Scroll progress tracking
+    const { scrollYProgress } = useScroll();
+    const scaleX = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001
+    });
 
     return (
         <>
@@ -23,8 +31,6 @@ export function Header() {
                         </Link>
                     </div>
 
-
-
                     <div className="flex items-center gap-4">
                         <ThemeToggle />
                         <button
@@ -35,6 +41,12 @@ export function Header() {
                         </button>
                     </div>
                 </div>
+
+                {/* Scroll Progress Bar */}
+                <motion.div
+                    className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 origin-left"
+                    style={{ scaleX }}
+                />
             </motion.header>
 
             <BuyCoffeeModal isOpen={isCoffeeOpen} onClose={() => setIsCoffeeOpen(false)} />

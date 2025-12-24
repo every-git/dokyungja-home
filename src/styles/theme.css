@@ -226,3 +226,23 @@
     backdrop-filter: blur(2px) !important;
   }
 }
+
+/* ================================
+   HIDE SCROLLBAR (Desktop)
+   Keep scroll functionality but hide the scrollbar
+   ================================ */
+@media (min-width: 769px) {
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+}

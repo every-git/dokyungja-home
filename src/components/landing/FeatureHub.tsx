@@ -82,9 +82,9 @@ export function FeatureHub() {
                                 rel={feature.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                                 className="block group h-full"
                             >
-                                <div className={`h-full p-8 rounded-3xl border transition-all duration-300 hover:shadow-xl hover:-translate-y-2 bg-card ${feature.color.replace('text-', 'hover:border-')}`}>
-                                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${feature.color}`}>
-                                        <feature.icon size={28} />
+                                <div className={`h-full p-10 rounded-3xl border transition-all duration-300 hover:shadow-xl hover:-translate-y-2 bg-card ${feature.color.replace('text-', 'hover:border-')}`}>
+                                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 ${feature.color}`}>
+                                        <feature.icon size={32} />
                                     </div>
 
                                     <h3 className="text-2xl font-bold mb-1 group-hover:text-primary transition-colors">
@@ -93,7 +93,7 @@ export function FeatureHub() {
                                     <p className="text-sm text-primary/80 font-medium mb-3">
                                         {feature.titleKo}
                                     </p>
-                                    <p className="text-muted-foreground mb-6 line-clamp-2">
+                                    <p className="text-muted-foreground mb-6">
                                         {feature.desc}
                                     </p>
 
