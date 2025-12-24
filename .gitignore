@@ -64,3 +64,5 @@ coverage
 # Misc
 *.pem
 .cache
+*.backup
+*.gif

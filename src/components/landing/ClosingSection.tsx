@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Mail, ArrowRight } from 'lucide-react';
-import asset12 from '../../assets/images/dokyungja_12.png';
+import asset12 from '../../assets/images/dokyungja.12.mp4';
 
 export function ClosingSection() {
     return (
@@ -20,9 +20,12 @@ export function ClosingSection() {
                     >
                         <div className="relative w-[300px] h-[300px] md:w-[500px] md:h-[500px]">
                             <div className="absolute inset-0 bg-gradient-to-tr from-amber-200/20 to-purple-200/20 rounded-full blur-3xl animate-pulse" />
-                            <img
+                            <video
                                 src={asset12}
-                                alt="Dokyungja Final"
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
                                 className="relative z-10 w-full h-full object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
                             />
                         </div>

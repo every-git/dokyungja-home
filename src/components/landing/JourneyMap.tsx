@@ -6,7 +6,7 @@ import asset02 from '../../assets/images/dokyungja_02.png';
 import asset03 from '../../assets/images/dokyungja_03.png';
 import asset04 from '../../assets/images/dokyungja_04.png';
 import asset05 from '../../assets/images/dokyungja_05.png';
-import asset09 from '../../assets/images/dokyungja_09.png';
+import asset09 from '../../assets/images/dokyungja_09.mp4';
 // Helper to compose Character + Device visual
 // (Code moved to StoryVisual inside StoryItem)
 
@@ -31,6 +31,7 @@ const stories = [
         desc: '단순한 코딩을 넘어,\nAI와 함께 아키텍처를 설계합니다.\nAnti-Gravity와 함께 생산성의 한계를 시험하고,\n새로운 기술의 파도를 가장 먼저 섭렵합니다.',
         device: 'mac',
         char: asset09,
+        isVideo: true,
         content: <MockContent title="AI-Assisted Dev" color="bg-gradient-to-br from-slate-900 to-indigo-900" icon="🤖" />
     },
     {
@@ -60,18 +61,32 @@ const stories = [
 ];
 
 // Helper to compose Character + Device visual
-const StoryVisual = ({ charImg }: { charImg: string, deviceType?: string }) => {
+const StoryVisual = ({ charImg, isVideo }: { charImg: string, deviceType?: string, isVideo?: boolean }) => {
     return (
         <div className="relative w-[300px] h-[300px] md:w-[500px] md:h-[500px] flex items-center justify-center">
             {/* Character (Main) */}
-            <motion.img
-                src={charImg}
-                alt="Character"
-                className="w-full h-full object-contain relative z-20 drop-shadow-xl"
-                initial={{ scale: 0.9, opacity: 0 }}
-                whileInView={{ scale: 1.1, opacity: 1 }}
-                transition={{ duration: 0.8 }}
-            />
+            {isVideo ? (
+                <motion.video
+                    src={charImg}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-contain relative z-20 drop-shadow-xl"
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    whileInView={{ scale: 1.1, opacity: 1 }}
+                    transition={{ duration: 0.8 }}
+                />
+            ) : (
+                <motion.img
+                    src={charImg}
+                    alt="Character"
+                    className="w-full h-full object-contain relative z-20 drop-shadow-xl"
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    whileInView={{ scale: 1.1, opacity: 1 }}
+                    transition={{ duration: 0.8 }}
+                />
+            )}
         </div>
     );
 };
@@ -97,7 +112,7 @@ function StoryItem({ story, index }: { story: typeof stories[0], index: number }
                 transition={{ duration: 0.8 }}
                 className={`w-full md:w-1/2 flex justify-center px-4 ${isEven ? 'md:order-1' : 'md:order-2'}`}
             >
-                <StoryVisual charImg={story.char} deviceType={story.device} />
+                <StoryVisual charImg={story.char} deviceType={story.device} isVideo={story.isVideo} />
             </motion.div>
 
             {/* Text Section */}
