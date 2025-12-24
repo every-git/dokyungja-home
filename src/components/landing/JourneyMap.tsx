@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import asset02 from '../../assets/images/dokyungja_02.webp';
 import asset03 from '../../assets/images/dokyungja_03.webp';
-import asset04 from '../../assets/images/dokyungja_04.webp';
+import asset04 from '../../assets/images/dokyungja_04.mp4';
 import asset05 from '../../assets/images/dokyungja_05.webp';
 import asset09 from '../../assets/images/dokyungja_09.mp4';
 // Helper to compose Character + Device visual
@@ -40,6 +40,7 @@ const stories = [
         desc: '방대한 시장 데이터를 AI 에이전트로 분석하여\n남들이 보지 못하는 흐름을 읽어냅니다.\n감각이 아닌 데이터로 증명하는 경제 인사이트.',
         device: 'ipad',
         char: asset04,
+        isVideo: true,
         content: <MockContent title="Market Intelligence" color="bg-gradient-to-br from-red-800 to-rose-900" icon="📊" />
     },
     {
