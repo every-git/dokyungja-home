@@ -101,7 +101,7 @@ function StoryItem({ story, index }: { story: typeof stories[0], index: number }
         <div
             id={`journey-${story.id}`}
             ref={ref}
-            className="min-h-[50vh] flex flex-col md:flex-row items-center justify-center gap-8 md:gap-24 py-16 md:py-32 relative scroll-mt-20"
+            className="min-h-[50vh] flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 lg:gap-24 py-16 md:py-32 relative scroll-mt-20"
         >
             {/* Background Spot */}
             <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-gradient-to-r ${isEven ? 'from-blue-200/20 to-purple-200/20' : 'from-orange-200/20 to-pink-200/20'} dark:from-blue-900/10 dark:to-purple-900/10 rounded-full blur-3xl -z-10`} />
@@ -123,18 +123,18 @@ function StoryItem({ story, index }: { story: typeof stories[0], index: number }
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ margin: "-10%" }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className={`w-full md:w-1/2 text-center ${isEven ? 'md:text-left md:order-2' : 'md:text-right md:order-1'} px-8`}
+                className={`w-full md:w-1/2 max-w-2xl text-center ${isEven ? 'md:text-left md:order-2' : 'md:text-right md:order-1'} px-6 md:px-12`}
             >
-                <h3 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/70">
+                <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 leading-tight tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/70 break-words">
                     {story.title}
                 </h3>
-                <p className="text-xl md:text-3xl text-muted-foreground whitespace-pre-line leading-relaxed font-medium">
+                <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground whitespace-pre-line leading-relaxed font-medium">
                     {story.desc}
                 </p>
                 <Link
                     to={`/journey/${story.id}`}
                     onClick={() => sessionStorage.setItem('journeyScrollY', window.scrollY.toString())}
-                    className="inline-block mt-10 px-10 py-4 rounded-full border border-primary/20 bg-background/50 hover:bg-primary hover:text-primary-foreground backdrop-blur-sm transition-all text-xl font-bold shadow-lg"
+                    className="inline-block mt-8 md:mt-10 px-8 md:px-10 py-3 md:py-4 rounded-full border border-primary/20 bg-background/50 hover:bg-primary hover:text-primary-foreground backdrop-blur-sm transition-all text-lg md:text-xl font-bold shadow-lg"
                 >
                     More Detail →
                 </Link>
