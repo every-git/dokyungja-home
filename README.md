@@ -10,9 +10,15 @@
   <a href="https://every-git.github.io/dokyungja-home/">
     <img src="https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-blue?style=for-the-badge" alt="Live Demo" />
   </a>
-  <img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React" />
-  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+  <a href="https://react.dev/" target="_blank">
+    <img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React" />
+  </a>
+  <a href="https://www.typescriptlang.org/" target="_blank">
+    <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  </a>
+  <a href="https://vitejs.dev/" target="_blank">
+    <img src="https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+  </a>
 </p>
 
 ---
