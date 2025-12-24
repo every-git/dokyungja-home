@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from 'motion/react';
+import { motion, useScroll, useTransform, useSpring } from 'motion/react';
 import { useRef } from 'react';
 
 import macImg from '../../assets/images/Macbook.webp';
@@ -22,7 +22,14 @@ export function FloatingDevice({ type, position, offsetY = 0 }: FloatingDevicePr
         offset: ["start end", "end start"]
     });
 
-    // Blur effect: starts blurred, clears as it slides in
+    // Add spring physics for smooth animation
+    const smoothProgress = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001
+    });
+
+    // Blur effect: starts blurred, clears as it slides in (use original for sharper transitions)
     const blur = useTransform(scrollYProgress, [0, 0.4], [8, 0]);
 
     let src = '';
@@ -36,7 +43,7 @@ export function FloatingDevice({ type, position, offsetY = 0 }: FloatingDevicePr
             widthClass = 'w-[600px] md:w-[900px]';
             containerClass = 'justify-start'; // Align Left
             // Slide from Left
-            const xMac = useTransform(scrollYProgress, [0, 0.5], ["-50%", "10%"]);
+            const xMac = useTransform(smoothProgress, [0, 0.5], ["-50%", "10%"]);
             animationStyle = { x: xMac };
             break;
 
@@ -45,7 +52,7 @@ export function FloatingDevice({ type, position, offsetY = 0 }: FloatingDevicePr
             widthClass = 'w-[400px] md:w-[600px]';
             containerClass = 'justify-end'; // Align Right
             // Slide from Right
-            const xIpad = useTransform(scrollYProgress, [0, 0.5], ["50%", "-10%"]);
+            const xIpad = useTransform(smoothProgress, [0, 0.5], ["50%", "-10%"]);
             animationStyle = { x: xIpad };
             break;
 
@@ -54,7 +61,7 @@ export function FloatingDevice({ type, position, offsetY = 0 }: FloatingDevicePr
             widthClass = 'w-[300px] md:w-[500px]';
             containerClass = 'justify-start'; // Align Left (Changed from center/pop)
             // Slide from Left
-            const xPhone = useTransform(scrollYProgress, [0, 0.5], ["-50%", "15%"]);
+            const xPhone = useTransform(smoothProgress, [0, 0.5], ["-50%", "15%"]);
             animationStyle = { x: xPhone };
             break;
 
@@ -63,7 +70,7 @@ export function FloatingDevice({ type, position, offsetY = 0 }: FloatingDevicePr
             widthClass = 'w-[350px] md:w-[600px]';
             containerClass = 'justify-end'; // Align Right (Changed from center/pop)
             // Slide from Right
-            const xPods = useTransform(scrollYProgress, [0, 0.5], ["50%", "-15%"]);
+            const xPods = useTransform(smoothProgress, [0, 0.5], ["50%", "-15%"]);
             animationStyle = { x: xPods };
             break;
 
@@ -72,7 +79,7 @@ export function FloatingDevice({ type, position, offsetY = 0 }: FloatingDevicePr
             widthClass = 'w-[280px] md:w-[400px] lg:w-[800px]'; // Smaller on mobile for better fit
             containerClass = 'justify-end'; // Align Right
             // Slide from Right - adjusted for mobile visibility
-            const xKeyboard = useTransform(scrollYProgress, [0, 0.6], ["50%", "0%"]);
+            const xKeyboard = useTransform(smoothProgress, [0, 0.6], ["50%", "0%"]);
             animationStyle = { x: xKeyboard };
             break;
 
@@ -81,7 +88,7 @@ export function FloatingDevice({ type, position, offsetY = 0 }: FloatingDevicePr
             widthClass = 'w-[280px] md:w-[420px]'; // 70% of 400/600
             containerClass = 'justify-end'; // Align Right
             // Slide from Right to middle
-            const xBell = useTransform(scrollYProgress, [0, 0.6], ["90%", "-50%"]);
+            const xBell = useTransform(smoothProgress, [0, 0.6], ["90%", "-50%"]);
             animationStyle = { x: xBell };
             break;
 
@@ -90,7 +97,7 @@ export function FloatingDevice({ type, position, offsetY = 0 }: FloatingDevicePr
             widthClass = 'w-[280px] md:w-[420px]'; // 70% of 400/600
             containerClass = 'justify-start'; // Align Left
             // Slide from Left to middle
-            const xRobot = useTransform(scrollYProgress, [0, 0.6], ["-90%", "50%"]);
+            const xRobot = useTransform(smoothProgress, [0, 0.6], ["-90%", "50%"]);
             animationStyle = { x: xRobot };
             break;
     }
@@ -100,7 +107,9 @@ export function FloatingDevice({ type, position, offsetY = 0 }: FloatingDevicePr
             <motion.div
                 style={{
                     ...animationStyle,
-                    filter: useTransform(blur, (v) => `blur(${v}px)`)
+                    filter: useTransform(blur, (v) => `blur(${v}px)`),
+                    transform: 'translateZ(0)', // GPU acceleration
+                    willChange: 'transform' // Browser hint for optimization
                 }}
                 className={`${widthClass} relative flex shrink-0`}
             >
