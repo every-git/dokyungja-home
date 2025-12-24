@@ -69,10 +69,10 @@ export function FloatingDevice({ type, position, offsetY = 0 }: FloatingDevicePr
 
         case 'keyboard':
             src = keyboardImg;
-            widthClass = 'w-[350px] md:w-[400px] lg:w-[800px]'; // Smaller on tablet to prevent text overlap
+            widthClass = 'w-[280px] md:w-[400px] lg:w-[800px]'; // Smaller on mobile for better fit
             containerClass = 'justify-end'; // Align Right
-            // Slide from Right - more dramatic entrance
-            const xKeyboard = useTransform(scrollYProgress, [0, 0.6], ["80%", "-5%"]);
+            // Slide from Right - adjusted for mobile visibility
+            const xKeyboard = useTransform(scrollYProgress, [0, 0.6], ["50%", "0%"]);
             animationStyle = { x: xKeyboard };
             break;
 

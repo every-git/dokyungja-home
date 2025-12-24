@@ -82,7 +82,7 @@ export default function Home() {
 
             {/* Section 5: Engineer Character */}
             <StickyStackingSection zIndex={6} className="bg-[var(--sticky-section)]">
-                <div className="flex justify-center py-16 overflow-hidden">
+                <div className="flex justify-center py-16 overflow-visible">
                     <motion.div
                         initial={{ y: 200, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
@@ -92,7 +92,7 @@ export default function Home() {
                         <motion.img
                             src={asset11}
                             alt="Floating Character"
-                            className="w-[400px] md:w-[700px] object-contain drop-shadow-2xl"
+                            className="w-[300px] md:w-[700px] object-contain drop-shadow-2xl"
                             animate={{ y: [0, -20, 0] }}
                             transition={{
                                 duration: 4,
