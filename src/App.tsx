@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import { Layout } from './components/layout/Layout';
 import { LoadingScreen } from './components/common/LoadingScreen';
+import { FloatingNav } from './components/common/FloatingNav';
 
 import JourneyDetail from './pages/JourneyDetail';
 
@@ -31,6 +32,7 @@ function App() {
                 <LoadingScreen onComplete={handleLoadingComplete} minDuration={2500} />
             )}
             <BrowserRouter basename="/dokyungja-home">
+                <FloatingNav />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/journey/:id" element={<JourneyDetail />} />
