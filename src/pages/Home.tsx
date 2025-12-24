@@ -42,7 +42,7 @@ export default function Home() {
             <IntroText />
 
             {/* Spacer with MacBook (Intro to Community) */}
-            <div className="relative h-40 md:h-64">
+            <div className="relative h-40 md:h-64 overflow-hidden">
                 <FloatingDevice type="mac" position="left" offsetY={0} />
             </div>
 
@@ -50,7 +50,7 @@ export default function Home() {
             <Community />
 
             {/* Spacer with Keyboard for Typing Section */}
-            <div className="relative h-40 md:h-64">
+            <div className="relative h-40 md:h-64 overflow-hidden">
                 <FloatingDevice type="keyboard" position="right" offsetY={0} />
             </div>
 
@@ -58,14 +58,14 @@ export default function Home() {
             <TypingSection />
 
             {/* Spacer with News Bell for NewsSection */}
-            <div className="relative h-40 md:h-64">
+            <div className="relative h-40 md:h-64 overflow-hidden">
                 <FloatingDevice type="newsbell" position="left" offsetY={0} />
             </div>
 
             <NewsSection />
 
             {/* Spacer with News Robot for TrendSection */}
-            <div className="relative h-40 md:h-64">
+            <div className="relative h-40 md:h-64 overflow-hidden">
                 <FloatingDevice type="newsrobot" position="right" offsetY={0} />
             </div>
 
