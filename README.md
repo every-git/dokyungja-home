@@ -3,7 +3,7 @@
 > **AI-Native Developer Portfolio** - 중력을 거스르는 개발자의 포트폴리오 웹사이트
 
 <p align="center">
-  <video src="src/assets/images/dokyungja.12.mp4" autoplay loop muted playsinline width="100%"></video>
+  <img src="src/assets/images/dokyungja_06.webp" alt="Dokyungja" width="100%" />
 </p>
 
 <p align="center">
