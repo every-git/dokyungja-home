@@ -59,7 +59,7 @@ export default function Home() {
             {/* Section 2: Typing with Keyboard spacer */}
             <StickyStackingSection zIndex={3} className="bg-[var(--sticky-section)]">
                 <div className="relative h-40 md:h-64">
-                    <FloatingDevice type="keyboard" position="right" offsetY={-100} />
+                    <FloatingDevice type="keyboard" position="right" offsetY={-120} />
                 </div>
                 <TypingSection />
             </StickyStackingSection>
