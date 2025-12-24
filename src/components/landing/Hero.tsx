@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { motion, useScroll, useTransform, useMotionValue, useMotionTemplate } from 'motion/react';
 
-import asset_01 from '../../assets/images/dokyungja_06.png'; // Main Character
+import asset_01 from '../../assets/images/dokyungja_06.webp'; // Main Character
 
 export function Hero() {
     const sectionRef = useRef(null);

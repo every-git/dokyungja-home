@@ -2,10 +2,10 @@ import { useRef } from 'react';
 import { motion, useInView } from 'motion/react';
 import { Link } from 'react-router-dom';
 
-import asset02 from '../../assets/images/dokyungja_02.png';
-import asset03 from '../../assets/images/dokyungja_03.png';
-import asset04 from '../../assets/images/dokyungja_04.png';
-import asset05 from '../../assets/images/dokyungja_05.png';
+import asset02 from '../../assets/images/dokyungja_02.webp';
+import asset03 from '../../assets/images/dokyungja_03.webp';
+import asset04 from '../../assets/images/dokyungja_04.webp';
+import asset05 from '../../assets/images/dokyungja_05.webp';
 import asset09 from '../../assets/images/dokyungja_09.mp4';
 // Helper to compose Character + Device visual
 // (Code moved to StoryVisual inside StoryItem)

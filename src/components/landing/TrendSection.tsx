@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
-import trendCollectorImg from '../../assets/images/trend_collector_new.png';
+import trendCollectorImg from '../../assets/images/trend_collector_new.webp';
 
 export function TrendSection() {
     const containerRef = useRef(null);

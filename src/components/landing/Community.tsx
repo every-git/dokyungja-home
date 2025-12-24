@@ -1,9 +1,9 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
-import asset02 from '../../assets/images/dokyungja_02.png';
-import asset07 from '../../assets/images/dokyungja_07.png';
-import asset08 from '../../assets/images/dokyungja_08.png';
-import asset10 from '../../assets/images/dokyungja_10.png';
+import asset02 from '../../assets/images/dokyungja_02.webp';
+import asset07 from '../../assets/images/dokyungja_07.webp';
+import asset08 from '../../assets/images/dokyungja_08.webp';
+import asset10 from '../../assets/images/dokyungja_10.webp';
 
 // Apple-style cubic bezier easing
 const appleEase: [number, number, number, number] = [0.25, 0.1, 0.25, 1.0];

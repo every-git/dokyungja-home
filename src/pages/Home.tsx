@@ -13,7 +13,7 @@ import { TrendSection } from '../components/landing/TrendSection';
 import { Community } from '../components/landing/Community';
 import { FloatingDevice } from '../components/common/FloatingDevice';
 import { ClosingSection } from '../components/landing/ClosingSection';
-import asset11 from '../assets/images/dokyungja_11.png'; // Wait, asset11 is used in floating char. Keeping it.
+import asset11 from '../assets/images/dokyungja_11.webp'; // Wait, asset11 is used in floating char. Keeping it.
 
 export default function Home() {
     const location = useLocation();

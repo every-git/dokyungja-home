@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import devtyperBg from '../../assets/images/devtyper_bg.png';
+import devtyperBg from '../../assets/images/devtyper_bg.webp';
 
 // Apple-style easing
 const appleEase: [number, number, number, number] = [0.25, 0.1, 0.25, 1.0];

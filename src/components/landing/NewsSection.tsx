@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
-import techImg from '../../assets/images/tech.png';
-import economyImg from '../../assets/images/Economy.png';
+import techImg from '../../assets/images/tech.webp';
+import economyImg from '../../assets/images/Economy.webp';
 
 export function NewsSection() {
     return (

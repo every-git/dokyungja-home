@@ -1,13 +1,13 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 
-import macImg from '../../assets/images/Macbook.png';
-import ipadImg from '../../assets/images/ipadpro.png';
-import iphoneImg from '../../assets/images/iphone.png';
-import airpodsImg from '../../assets/images/airpod-max.png';
-import keyboardImg from '../../assets/images/typing_keyboard.png';
-import newsBellImg from '../../assets/images/news_bell.png';
-import newsRobotImg from '../../assets/images/news_robot.png';
+import macImg from '../../assets/images/Macbook.webp';
+import ipadImg from '../../assets/images/ipadpro.webp';
+import iphoneImg from '../../assets/images/iphone.webp';
+import airpodsImg from '../../assets/images/airpod-max.webp';
+import keyboardImg from '../../assets/images/typing_keyboard.webp';
+import newsBellImg from '../../assets/images/news_bell.webp';
+import newsRobotImg from '../../assets/images/news_robot.webp';
 
 interface FloatingDeviceProps {
     type: 'mac' | 'ipad' | 'iphone' | 'airpods' | 'keyboard' | 'newsbell' | 'newsrobot';
