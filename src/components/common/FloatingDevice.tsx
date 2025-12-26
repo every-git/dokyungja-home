@@ -42,8 +42,8 @@ export function FloatingDevice({ type, position, offsetY = 0 }: FloatingDevicePr
             src = macImg;
             widthClass = 'w-[600px] md:w-[900px]';
             containerClass = 'justify-start'; // Align Left
-            // Slide from Left
-            const xMac = useTransform(smoothProgress, [0, 0.5], ["-50%", "10%"]);
+            // Slide from Left - 더 왼쪽으로 제한하여 텍스트와 겹치지 않도록
+            const xMac = useTransform(smoothProgress, [0, 0.5], ["-50%", "-5%"]);
             animationStyle = { x: xMac };
             break;
 
@@ -103,7 +103,7 @@ export function FloatingDevice({ type, position, offsetY = 0 }: FloatingDevicePr
     }
 
     return (
-        <div ref={ref} className={`absolute w-full pointer-events-none z-20 flex items-center ${containerClass} overflow-visible`} style={{ top: offsetY ? `${offsetY}px` : 'auto' }}>
+        <div ref={ref} className={`absolute w-full pointer-events-none z-10 flex items-center ${containerClass} overflow-visible`} style={{ top: offsetY ? `${offsetY}px` : 'auto' }}>
             <motion.div
                 style={{
                     ...animationStyle,

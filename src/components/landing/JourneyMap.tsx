@@ -28,11 +28,11 @@ const stories = [
     {
         id: 'tech',
         title: 'AI × Engineering',
-        desc: '단순한 코딩을 넘어,\nAI와 함께 아키텍처를 설계합니다.\nAnti-Gravity와 함께 생산성의 한계를 시험하고,\n새로운 기술의 파도를 가장 먼저 섭렵합니다.',
+        desc: '단순한 코딩을 넘어,\nAI와 함께 아키텍처를 설계합니다.\n생산성의 한계를 시험하고,\n새로운 기술의 파도를 가장 먼저 섭렵합니다.',
         device: 'mac',
         char: asset09,
         isVideo: true,
-        content: <MockContent title="AI-Assisted Dev" color="bg-gradient-to-br from-slate-900 to-indigo-900" icon="🤖" />
+        content: <MockContent title="AI-Assisted Dev" color="bg-gradient-to-br from-slate-950 to-slate-900" icon="🤖" />
     },
     {
         id: 'economy',
@@ -41,7 +41,7 @@ const stories = [
         device: 'ipad',
         char: asset04,
         isVideo: true,
-        content: <MockContent title="Market Intelligence" color="bg-gradient-to-br from-red-800 to-rose-900" icon="📊" />
+        content: <MockContent title="Market Intelligence" color="bg-gradient-to-br from-slate-950 to-slate-900" icon="📊" />
     },
     {
         id: 'shop',
@@ -50,16 +50,9 @@ const stories = [
         device: 'iphone',
         char: asset03,
         isVideo: true,
-        content: <MockContent title="Smart Select Shop" color="bg-gradient-to-br from-purple-800 to-fuchsia-900" icon="🛍️" />
+        content: <MockContent title="Smart Select Shop" color="bg-gradient-to-br from-slate-950 to-slate-900" icon="🛍️" />
     },
-    {
-        id: 'art',
-        title: 'Generative Creativity',
-        desc: '인간의 상상력에 AI의 표현력을 더했습니다.\n프롬프트 엔지니어링으로 그려내는\n새로운 차원의 예술 세계를 경험하세요.',
-        device: 'ipad',
-        char: asset05,
-        content: <MockContent title="AI Art Gallery" color="bg-gradient-to-br from-emerald-800 to-teal-900" icon="🎨" />
-    }
+    // NOTE: 'Generative Creativity' 섹션은 요구사항에 따라 제거됨
 ];
 
 // Helper to compose Character + Device visual
@@ -104,7 +97,7 @@ function StoryItem({ story, index }: { story: typeof stories[0], index: number }
             className="min-h-[50vh] flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 lg:gap-24 py-16 md:py-32 relative scroll-mt-20"
         >
             {/* Background Spot */}
-            <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-gradient-to-r ${isEven ? 'from-blue-200/20 to-purple-200/20' : 'from-orange-200/20 to-pink-200/20'} dark:from-blue-900/10 dark:to-purple-900/10 rounded-full blur-3xl -z-10`} />
+            <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[620px] md:h-[620px] bg-gradient-to-r ${isEven ? 'from-slate-300/20 to-slate-100/10' : 'from-slate-200/15 to-slate-50/10'} dark:from-white/6 dark:to-white/3 rounded-full blur-3xl -z-10`} />
 
             {/* Visual Section */}
             <motion.div
@@ -153,9 +146,9 @@ export function JourneyMap() {
                         whileInView={{ opacity: 1, y: 0 }}
                         className="text-5xl md:text-8xl font-black mb-4 tracking-tighter"
                     >
-                        My Journey
+                        Principles
                     </motion.h2>
-                    <p className="text-xl text-muted-foreground">도경자가 걸어온 길을 소개합니다.</p>
+                    <p className="text-xl text-muted-foreground">도경자가 추구하는 것.</p>
                 </div>
 
                 <div className="flex flex-col">

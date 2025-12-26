@@ -63,8 +63,12 @@ export function FeatureHub() {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <span className="text-primary font-bold tracking-wider uppercase text-sm">Projects</span>
-                    <h2 className="text-4xl md:text-6xl font-bold mt-2">이런 걸 만들었습니다.</h2>
+                    <span className="text-primary font-bold tracking-wider uppercase text-sm">Recap</span>
+                    <h2 className="text-4xl md:text-6xl font-bold mt-2">위에서 소개한 것들, 한눈에</h2>
+                    <p className="text-muted-foreground mt-4 text-lg max-w-2xl mx-auto">
+                        커뮤니티 · 블로그 · 뉴스 큐레이션 · 타자연습까지.<br />
+                        연결된 흐름으로 설계하고 운영합니다.
+                    </p>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

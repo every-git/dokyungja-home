@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Layout } from '../components/layout/Layout';
-import { ArrowLeft, Cpu, TrendingUp, ShoppingBag, Palette } from 'lucide-react';
+import { ArrowLeft, Cpu, TrendingUp, ShoppingBag } from 'lucide-react';
 
 const detailContent = {
     tech: {
@@ -63,25 +63,6 @@ const detailContent = {
             - **Hidden Gems**: 알고리즘이 찾아낸, 아직 유명하지 않지만 보석 같은 브랜드를 소개합니다.
             
             쇼핑의 피로를 줄이고, 발견의 기쁨만을 남겨드립니다.
-        `
-    },
-    art: {
-        title: "Generative Creativity",
-        subtitle: "Imagination Unlimited",
-        icon: <Palette size={48} />,
-        color: "from-emerald-800 to-teal-900",
-        description: `
-            인간의 상상력에 AI의 표현력을 더했습니다.
-            
-            **Prompt Engineering Art**
-            
-            한 줄의 문장이 하나의 세계가 됩니다. 프롬프트 엔지니어링으로 그려내는 새로운 차원의 예술입니다.
-            
-            - **Style Transfer**: 고전 명화부터 사이버펑크까지, 시공간을 초월한 스타일을 융합합니다.
-            - **Narrative Visuals**: 단순한 이미지가 아닌, 이야기가 담긴 비주얼 스토리텔링을 구현합니다.
-            - **Interactive Art**: 관객의 참여로 완성되는 생성형 예술 경험을 제공합니다.
-            
-            상상하는 모든 것이 현실이 되는 곳, 도경자의 갤러리에 오신 것을 환영합니다.
         `
     }
 };

@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import devtyperBg from '../../assets/images/devtyper_bg.webp';
+import TypingGame from '../typing/TypingGame';
 
 // Apple-style easing
 const appleEase: [number, number, number, number] = [0.25, 0.1, 0.25, 1.0];
@@ -12,6 +12,7 @@ export function TypingSection() {
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
                     transition={{ duration: 0.8, ease: appleEase }}
                     className="text-center mb-16"
                 >
@@ -20,36 +21,21 @@ export function TypingSection() {
                         개발자 타자연습
                     </h2>
                     <p className="text-xl text-muted-foreground">
-                        언어별 연습공간, 커스텀 설정, 순위 제공까지<br />
-                        재미를 더한 타자 연습 프로그램.
+                        JavaScript 코드를 타이핑하며 연습해보세요.<br />
+                        정확도와 속도를 측정합니다.
                     </p>
                 </motion.div>
 
-                {/* DevTyper Screenshot as Background */}
-                <motion.a
-                    href="https://802.dokyungja.us/typing-game"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                {/* Typing Game */}
+                <motion.div
                     initial={{ opacity: 0, y: 50, scale: 0.95 }}
                     whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                    whileHover={{ scale: 1.02 }}
+                    viewport={{ once: true }}
                     transition={{ duration: 0.8, ease: appleEase }}
-                    className="relative w-full max-w-5xl rounded-2xl overflow-hidden shadow-2xl border border-white/10 cursor-pointer group"
+                    className="w-full"
                 >
-                    <img
-                        src={devtyperBg}
-                        alt="DevTyper - 개발자 타자연습"
-                        loading="lazy"
-                        className="w-full h-auto group-hover:brightness-110 transition-all duration-500"
-                    />
-
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <span className="text-white text-2xl font-bold px-8 py-4 bg-primary/90 rounded-full">
-                            연습 시작하기 →
-                        </span>
-                    </div>
-                </motion.a>
+                    <TypingGame />
+                </motion.div>
 
             </div>
         </section>
