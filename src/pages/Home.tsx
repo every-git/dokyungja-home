@@ -10,6 +10,7 @@ import { FeatureHub } from '../components/landing/FeatureHub';
 import { TypingSection } from '../components/landing/TypingSection';
 import { NewsSection } from '../components/landing/NewsSection';
 import { TrendSection } from '../components/landing/TrendSection';
+import { AstroSpeedSection } from '../components/landing/AstroSpeedSection';
 import { Community } from '../components/landing/Community';
 import { FloatingDevice } from '../components/common/FloatingDevice';
 import { ClosingSection } from '../components/landing/ClosingSection';
@@ -72,16 +73,21 @@ export default function Home() {
                 <NewsSection />
             </StickyStackingSection>
 
-            {/* Section 4: Trend with Robot spacer */}
+            {/* Section 4: Astro Speed - above Trend */}
             <StickyStackingSection zIndex={5} className="bg-[var(--sticky-section)]">
+                <AstroSpeedSection />
+            </StickyStackingSection>
+
+            {/* Section 5: Trend with Robot spacer */}
+            <StickyStackingSection zIndex={6} className="bg-[var(--sticky-section)]">
                 <div className="relative h-40 md:h-64">
                     <FloatingDevice type="newsrobot" position="right" offsetY={0} />
                 </div>
                 <TrendSection />
             </StickyStackingSection>
 
-            {/* Section 5: Engineer Character */}
-            <StickyStackingSection zIndex={6} className="bg-[var(--sticky-section)]">
+            {/* Section 6: Engineer Character */}
+            <StickyStackingSection zIndex={7} className="bg-[var(--sticky-section)]">
                 <div className="flex justify-center py-16 overflow-visible">
                     <motion.div
                         initial={{ y: 200, opacity: 0 }}
@@ -105,23 +111,23 @@ export default function Home() {
                 </div>
             </StickyStackingSection>
 
-            {/* Section 6: Feature Hub */}
-            <StickyStackingSection zIndex={7} className="bg-[var(--sticky-section)]">
+            {/* Section 7: Feature Hub */}
+            <StickyStackingSection zIndex={8} className="bg-[var(--sticky-section)]">
                 <FeatureHub />
             </StickyStackingSection>
 
-            {/* Section 7: Skills Universe */}
-            <StickyStackingSection zIndex={8} className="bg-[var(--sticky-section)]">
+            {/* Section 8: Skills Universe */}
+            <StickyStackingSection zIndex={9} className="bg-[var(--sticky-section)]">
                 <SkillsUniverse />
             </StickyStackingSection>
 
-            {/* Section 8: Journey Map */}
-            <StickyStackingSection zIndex={9} className="bg-[var(--sticky-section)]">
+            {/* Section 9: Journey Map */}
+            <StickyStackingSection zIndex={10} className="bg-[var(--sticky-section)]">
                 <JourneyMap />
             </StickyStackingSection>
 
-            {/* Section 9: Closing */}
-            <StickyStackingSection zIndex={10} className="bg-[var(--sticky-section)]">
+            {/* Section 10: Closing */}
+            <StickyStackingSection zIndex={11} className="bg-[var(--sticky-section)]">
                 <ClosingSection />
             </StickyStackingSection>
         </Layout>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import asset02 from '../../assets/images/dokyungja_02.mp4';
 import asset09 from '../../assets/images/dokyungja_09.mp4';
-import asset06 from '../../assets/images/dokyungja_06.webp';
+import asset06 from '../../assets/images/dokyungja_06.webp'; // 다른 용도로 사용 가능
 // Helper to compose Character + Device visual
 // (Code moved to StoryVisual inside StoryItem)
 
@@ -41,16 +41,8 @@ const stories = [
         isVideo: true,
         content: <MockContent title="Market Intelligence" color="bg-gradient-to-br from-slate-950 to-slate-900" icon="📊" />
     },
-    {
-        id: 'astro',
-        title: 'Astro × Speed',
-        desc: '0.1초의 로딩도 용납하지 않습니다.\nAstro 프레임워크로 구현한 블로그와 쇼핑몰은\n번개처럼 빠른 반응성과 완벽한 SEO를 자랑합니다.\n사용자 경험의 새로운 기준을 제시합니다.',
-        device: 'iphone',
-        char: asset06,
-        isVideo: false,
-        content: <MockContent title="Lightning Fast" color="bg-gradient-to-br from-orange-600 to-purple-900" icon="⚡" />
-    },
     // NOTE: 추가 섹션은 계속 업데이트될 예정입니다
+    // Astro × Speed 섹션은 TrendSection 위에 별도 섹션으로 이동됨
 ];
 
 // Helper to compose Character + Device visual
