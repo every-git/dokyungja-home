@@ -2,10 +2,7 @@ import { useRef } from 'react';
 import { motion, useInView } from 'motion/react';
 import { Link } from 'react-router-dom';
 
-import asset02 from '../../assets/images/dokyungja_02.webp';
-import asset03 from '../../assets/images/dokyungja_03.mp4';
-import asset04 from '../../assets/images/dokyungja_04.mp4';
-import asset05 from '../../assets/images/dokyungja_05.webp';
+import asset02 from '../../assets/images/dokyungja_02.mp4';
 import asset09 from '../../assets/images/dokyungja_09.mp4';
 // Helper to compose Character + Device visual
 // (Code moved to StoryVisual inside StoryItem)
@@ -39,20 +36,11 @@ const stories = [
         title: 'Data Insight & AI',
         desc: '방대한 시장 데이터를 AI 에이전트로 분석하여\n남들이 보지 못하는 흐름을 읽어냅니다.\n감각이 아닌 데이터로 증명하는 경제 인사이트.',
         device: 'ipad',
-        char: asset04,
+        char: asset02,
         isVideo: true,
         content: <MockContent title="Market Intelligence" color="bg-gradient-to-br from-slate-950 to-slate-900" icon="📊" />
     },
-    {
-        id: 'shop',
-        title: 'Curated by Algorithm',
-        desc: '나의 취향 데이터와 트렌드 분석 AI가 만났습니다.\n수많은 제품 홍수 속에서\n정말 가치 있는 물건만을 큐레이션합니다.',
-        device: 'iphone',
-        char: asset03,
-        isVideo: true,
-        content: <MockContent title="Smart Select Shop" color="bg-gradient-to-br from-slate-950 to-slate-900" icon="🛍️" />
-    },
-    // NOTE: 'Generative Creativity' 섹션은 요구사항에 따라 제거됨
+    // NOTE: 추가 섹션은 계속 업데이트될 예정입니다
 ];
 
 // Helper to compose Character + Device visual
@@ -156,6 +144,18 @@ export function JourneyMap() {
                         <StoryItem key={story.id} story={story} index={index} />
                     ))}
                 </div>
+
+                {/* Coming Soon Message */}
+                <motion.div
+                    className="py-16 text-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                >
+                    <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+                        계속 업데이트 됩니다.<br />Stay tuned for more.
+                    </p>
+                </motion.div>
             </div>
         </section>
     );
