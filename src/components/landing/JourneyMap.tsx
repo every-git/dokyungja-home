@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import asset02 from '../../assets/images/dokyungja_02.mp4';
 import asset09 from '../../assets/images/dokyungja_09.mp4';
+import asset06 from '../../assets/images/dokyungja_06.webp';
 // Helper to compose Character + Device visual
 // (Code moved to StoryVisual inside StoryItem)
 
@@ -39,6 +40,15 @@ const stories = [
         char: asset02,
         isVideo: true,
         content: <MockContent title="Market Intelligence" color="bg-gradient-to-br from-slate-950 to-slate-900" icon="📊" />
+    },
+    {
+        id: 'astro',
+        title: 'Astro × Speed',
+        desc: '0.1초의 로딩도 용납하지 않습니다.\nAstro 프레임워크로 구현한 블로그와 쇼핑몰은\n번개처럼 빠른 반응성과 완벽한 SEO를 자랑합니다.\n사용자 경험의 새로운 기준을 제시합니다.',
+        device: 'iphone',
+        char: asset06,
+        isVideo: false,
+        content: <MockContent title="Lightning Fast" color="bg-gradient-to-br from-orange-600 to-purple-900" icon="⚡" />
     },
     // NOTE: 추가 섹션은 계속 업데이트될 예정입니다
 ];
@@ -145,16 +155,78 @@ export function JourneyMap() {
                     ))}
                 </div>
 
-                {/* Coming Soon Message */}
+                {/* Coming Soon Message with Animation */}
                 <motion.div
                     className="py-16 text-center"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-                        계속 업데이트 됩니다.<br />Stay tuned for more.
-                    </p>
+                    {/* Bouncing Dots - Top */}
+                    <div className="flex justify-center gap-2 mb-6">
+                        {[0, 1, 2].map((i) => (
+                            <motion.div
+                                key={i}
+                                className="w-3 h-3 rounded-full bg-primary/60"
+                                animate={{ y: [0, -12, 0] }}
+                                transition={{
+                                    duration: 0.8,
+                                    repeat: Infinity,
+                                    delay: i * 0.15,
+                                    ease: "easeInOut"
+                                }}
+                            />
+                        ))}
+                    </div>
+
+                    <div className="flex items-center justify-center gap-4">
+                        {/* Left Arrow Animation */}
+                        <motion.span
+                            className="text-2xl text-primary/50"
+                            animate={{ x: [0, -8, 0] }}
+                            transition={{
+                                duration: 1.2,
+                                repeat: Infinity,
+                                ease: "easeInOut"
+                            }}
+                        >
+                            ◀
+                        </motion.span>
+
+                        <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+                            계속 업데이트 됩니다.<br />Stay tuned for more.
+                        </p>
+
+                        {/* Right Arrow Animation */}
+                        <motion.span
+                            className="text-2xl text-primary/50"
+                            animate={{ x: [0, 8, 0] }}
+                            transition={{
+                                duration: 1.2,
+                                repeat: Infinity,
+                                ease: "easeInOut"
+                            }}
+                        >
+                            ▶
+                        </motion.span>
+                    </div>
+
+                    {/* Bouncing Dots - Bottom */}
+                    <div className="flex justify-center gap-2 mt-6">
+                        {[0, 1, 2].map((i) => (
+                            <motion.div
+                                key={i}
+                                className="w-3 h-3 rounded-full bg-primary/60"
+                                animate={{ y: [0, 12, 0] }}
+                                transition={{
+                                    duration: 0.8,
+                                    repeat: Infinity,
+                                    delay: i * 0.15,
+                                    ease: "easeInOut"
+                                }}
+                            />
+                        ))}
+                    </div>
                 </motion.div>
             </div>
         </section>
